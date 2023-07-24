@@ -13,7 +13,7 @@ jobs:
       with:
         switches: -avzr --delete --exclude=".git" --exclude=".github"
         path: /
-        remote_path: ${{ secrets.DEPLOY_PATH }}
+        remote_path: /home/sboc4997/public_html/coba-ssh.sbos.my.id
         remote_host: ${{ secrets.DEPLOY_HOST }}
         remote_user: ${{ secrets.DEPLOY_USER }}
         remote_key: ${{ secrets.DEPLOY_KEY }}
