@@ -7,11 +7,11 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v2
     - name: rsync deployments
-      uses: burnett01/rsync-deployments@6.0.0
+      uses: burnett01/rsync-deployments@5.2.2
       with:
-        switches: -avzr --delete --exclude="" --include="" --filter=""
+        switches: -avzr --delete
         path: src/
         remote_path: ${{ secrets.DEPLOY_PATH }}
         remote_host: ${{ secrets.DEPLOY_HOST }}
